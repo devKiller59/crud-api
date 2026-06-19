@@ -3,7 +3,7 @@
     "id": 1,
     "first_name": "Juan",
     "last_name": "Perez",
-    "email": "juan@example.com",
+    "email": "juan.per@mail.com",
     "password": "password1",
     "birthday": "1990-01-01"
   },
@@ -11,7 +11,7 @@
     "id": 2,
     "first_name": "Maria",
     "last_name": "Gomez",
-    "email": "maria@example.com",
+    "email": "maria.gom@mail.com",
     "password": "password2",
     "birthday": "1992-05-15"
   },

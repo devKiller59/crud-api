@@ -40,8 +40,11 @@ app.post('/users', (req, res) => {
         const users = readUsers();
         const newUser = {
             id: Date.now(), // ID único basado en el tiempo
-            name: req.body.name,
-            email: req.body.email
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            email: req.body.email,
+            password: req.body.password,
+            birthday: req.body.birthday
         };
         
         users.push(newUser);
