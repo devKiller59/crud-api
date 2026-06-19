@@ -24,12 +24,15 @@ mongoose.connect(MONGO_URI)
 
 // Definir el esquema y modelo de usuario (aunque no lo usaremos en este ejemplo, es para futuras mejoras)
 const userSchema = new mongoose.Schema({
-    first_name: String,
-    last_name: String,
-    email: String,
-    password: String,
-    birthday: Date
+  first_name: { type: String, required: true },
+  last_name: { type: String, required: true },
+  email: { type: String, required: true },
+  password: { type: String, required: true },
+  birthday: { type: Date, required: true }
+}, { 
+  timestamps: true // <-- Para que Mongoose crea las fechas de creación y actualización automáticamente
 });
+
 const User = mongoose.model('User', userSchema);
 
 // --- RUTAS DEL CRUD ---
