@@ -58,7 +58,7 @@ app.post('/users', async (req, res) => {
             birthday: req.body.birthday
         });
         await newUser.save(); // Guarda el nuevo usuario en MongoDB
-        res.status(201).json(newUser);
+        res.status(201).json({ message: 'Usuario creado correctamente', newUser });
     } catch (error) {
         res.status(500).json({ message: 'Error al guardar el usuario' });
     }
@@ -80,7 +80,7 @@ app.put('/users/:id', async (req, res) => {
     try {
         const { id } = req.params;
         const userUpdated = await User.findByIdAndUpdate(id, req.body, { new: true }); // Actualiza el usuario en MongoDB
-        res.json(userUpdated);
+        res.json({ message: 'Usuario actualizado correctamente', userUpdated });
     } catch (error) {
         res.status(500).json({ message: 'Error al actualizar el usuario' });
     }
