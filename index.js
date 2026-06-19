@@ -72,6 +72,17 @@ app.delete('/users/:id', async (req, res) => {
     }
 });
 
+// 4. ACTUALIZAR UN USUARIO (PUT)
+app.put('/users/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        const userUpdated = await User.findByIdAndUpdate(id, req.body, { new: true }); // Actualiza el usuario en MongoDB
+        res.json(userUpdated);
+    } catch (error) {
+        res.status(500).json({ message: 'Error al actualizar el usuario' });
+    }
+});
+
 // Encender el servidor
 app.listen(PORT, () => {
     console.log(`Servidor API corriendo en http://localhost:${PORT}`);
