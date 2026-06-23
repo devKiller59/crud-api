@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KillerCore API v1.0</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-900 text-slate-100 flex align-items justify-center min-h-screen font-sans">
+
+    <div class="max-w-3xl w-full mx-4 p-8 bg-slate-800 rounded-2xl shadow-2xl border border-slate-700 text-center animate-fade-in">
+        <!-- Encabezado -->
+        <h1 class="text-4xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            🚀 KillerCore API
+        </h1>
+        <p class="mt-2 text-sm text-slate-400 font-mono">v1.0.0 • Entorno Local</p>
+        <p class="mt-4 text-slate-300 text-lg">
+            ¡Bienvenido al backend centralizado de KillerCore! El sistema está en línea y operando correctamente.
+        </p>
+
+        <!-- Estado del Servidor -->
+        <div class="mt-6 inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 rounded-full text-sm font-semibold">
+            <span class="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-ping"></span>
+            Servidor Activo • Conectado a MongoDB
+        </div>
+
+        <!-- Tabla de Endpoints Disponibles -->
+        <div class="mt-8 text-left">
+            <h2 class="text-xl font-bold text-slate-200 mb-4 border-b border-slate-700 pb-2">📌 Endpoints de la API</h2>
+            <div class="space-y-3 font-mono text-sm max-h-60 overflow-y-auto pr-2">
+                
+                <div class="flex items-center gap-3 p-2 bg-slate-900/50 rounded border border-slate-700/50">
+                    <span class="px-2 py-1 text-xs font-bold bg-emerald-600/20 text-emerald-400 border border-emerald-500/30 rounded w-16 text-center">POST</span>
+                    <span class="text-slate-300">/api/users/register</span>
+                    <span class="text-slate-500 text-xs ml-auto">Público</span>
+                </div>
+
+                <div class="flex items-center gap-3 p-2 bg-slate-900/50 rounded border border-slate-700/50">
+                    <span class="px-2 py-1 text-xs font-bold bg-emerald-600/20 text-emerald-400 border border-emerald-500/30 rounded w-16 text-center">POST</span>
+                    <span class="text-slate-300">/api/users/login</span>
+                    <span class="text-slate-500 text-xs ml-auto">Público</span>
+                </div>
+
+                <div class="flex items-center gap-3 p-2 bg-slate-900/50 rounded border border-slate-700/50">
+                    <span class="px-2 py-1 text-xs font-bold bg-blue-600/20 text-blue-400 border border-blue-500/30 rounded w-16 text-center">GET</span>
+                    <span class="text-slate-300">/api/users/profile</span>
+                    <span class="text-amber-400 text-xs ml-auto font-sans">🔑 Privado (JWT)</span>
+                </div>
+
+                <div class="flex items-center gap-3 p-2 bg-slate-900/50 rounded border border-slate-700/50">
+                    <span class="px-2 py-1 text-xs font-bold bg-blue-600/20 text-blue-400 border border-blue-500/30 rounded w-16 text-center">GET</span>
+                    <span class="text-slate-300">/api/users/username/:username</span>
+                    <span class="text-slate-500 text-xs ml-auto">Público</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Pie de página -->
+        <footer class="mt-8 pt-6 border-t border-slate-700 text-xs text-slate-500">
+            Desarrollado por <span class="text-slate-400 font-semibold">devKiller59</span> &copy; 2026
+        </footer>
+    </div>
+
+</body>
+</html>
